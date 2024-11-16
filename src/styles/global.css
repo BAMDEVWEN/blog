@@ -34,11 +34,11 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
+	/*background: linear-gradient(var(--gray-gradient)) no-repeat;*/
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	/*color: rgb(var(--gray-dark));*/
 	font-size: 20px;
 	line-height: 1.7;
 }
@@ -55,7 +55,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	/*color: rgb(var(--black));*/
 	line-height: 1.2;
 }
 h1 {
@@ -78,7 +78,8 @@ b {
 	font-weight: 700;
 }
 a {
-	color: var(--accent);
+	text-decoration: none;
+	/*color: var(--accent);*/
 }
 a:hover {
 	color: var(--accent);
@@ -151,4 +152,13 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+html.dark {
+	background-color: #202124;
+	color: #ffffff;
+}
+
+
+.dark .nav-links a {
+	color: #fff;
 }
