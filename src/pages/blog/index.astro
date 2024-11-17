@@ -104,6 +104,16 @@ const posts = (await getCollection('blog')).sort(
         .tags a {
             text-decoration: none;
         }
+        .tag{
+            display: inline-block;
+            margin: 5px 10px;
+            border-radius: 15px;
+            background-color: #62a3e7;
+            padding: 5px;
+        }
+        .tag:hover{
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -121,7 +131,7 @@ const posts = (await getCollection('blog')).sort(
 								<div class="tags" style="display: flex; justify-content: center;">
 									{
 										post.data.tags?.map(tag => (
-											<a href={`/blog?tag=${tag}`} style="margin-right: 10px">{tag}</a>
+											<a class="tag" href={`/blog?tag=${tag}`} style="margin-right: 10px">{tag}</a>
 										))
 									}
 								</div>
