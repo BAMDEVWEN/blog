@@ -47,8 +47,8 @@ tags: ['docker','docker-compose']
         - commad 启动时要执行的命令
         - depends_on 服务依赖关系
         - networks 指定所属的网络
-        -  `environment:   `   设置北京事件
-           - `- TZ=Asia/Shanghai`
+        -  environment:      设置北京时间
+           - - TZ=Asia/Shanghai
 
 ```yaml
 version: "3"

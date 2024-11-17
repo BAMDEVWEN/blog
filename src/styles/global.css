@@ -55,9 +55,20 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	/*color: rgb(var(--black));*/
+	color: rgb(var(--black));
 	line-height: 1.2;
 }
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6  {
+	margin: 0 0 0.5rem 0;
+	color: white;
+	line-height: 1.2;
+}
+
 h1 {
 	font-size: 3.052em;
 }
