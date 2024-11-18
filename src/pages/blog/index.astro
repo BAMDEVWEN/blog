@@ -35,7 +35,16 @@ const posts = (await getCollection('blog')).sort(
         }
 
         ul li {
-            width: calc(50% - 1rem);
+            width: calc(48% - 1rem);
+            border-radius: 8px;
+            padding: 9px;
+            //box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+        ul li:hover{
+            background-color: aliceblue;
         }
 
         ul li * {
@@ -120,6 +129,7 @@ const posts = (await getCollection('blog')).sort(
             background-color: #62a3e7;
             padding: 5px;
             min-width: 60px;
+            text-align: center;
         }
         .tag:hover{
             background-color: #0056b3;
