@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import {SITE_TITLE, SITE_DESCRIPTION} from '../../consts';
 import {getCollection} from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import {Astro} from "astro/env";
 
 const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -26,7 +27,12 @@ const posts = (await getCollection('blog')).sort(
             gap: 2rem;
             list-style-type: none;
             margin: 0;
-            padding: 0;
+            padding: 40px 20px;
+            box-shadow: 5px 5px 5px 5px rgba(224, 221, 221, 0.5);
+
+        }
+        .dark ul{
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
         }
 
         ul li {
@@ -46,6 +52,10 @@ const posts = (await getCollection('blog')).sort(
 
         ul li:first-child img {
             width: 100%;
+        }
+        ul li:first-child .tags {
+            justify-content: center !important;
+
         }
 
         ul li:first-child .title {
@@ -98,6 +108,7 @@ const posts = (await getCollection('blog')).sort(
             ul li:first-child .title {
                 font-size: 1.563em;
             }
+
         }
 
         .tags a {
@@ -109,6 +120,7 @@ const posts = (await getCollection('blog')).sort(
             border-radius: 15px;
             background-color: #62a3e7;
             padding: 5px;
+            min-width: 60px;
         }
         .tag:hover{
             background-color: #0056b3;
@@ -127,7 +139,7 @@ const posts = (await getCollection('blog')).sort(
 						<li>
 							<a href={`/blog/${post.slug}/`}>
 								<h4 class="title">{post.data.title}</h4>
-								<div class="tags" style="display: flex; justify-content: center;">
+								<div class="tags" style="display: flex; justify-content: left;">
 									{
 										post.data.tags?.map(tag => (
 											<a class="tag" href={`/blog?tag=${tag}`} style="margin-right: 10px">{tag}</a>
