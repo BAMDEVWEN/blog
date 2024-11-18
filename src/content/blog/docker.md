@@ -2,6 +2,7 @@
 title: 'Docker基础使用'
 description: 'docker 的基本使用'
 pubDate: 'Nov 15 2024'
+heroImage: '../../blog-placeholder-2.jpg'
 tags: ['docker','docker-compose']
 ---
 # Docker
@@ -146,7 +147,7 @@ services:
 
 ```
 
-![image-20231113120602459](C:\Users\文\AppData\Roaming\Typora\typora-user-images\image-20231113120602459.png)
+![image-20231113120602459](../../../public/image-20231113120602459.png)
 
 ```shell
 docker run -d -P --name tomcat01 tomcat #启动一个tomcat容器
@@ -180,7 +181,7 @@ apt install iproute2
 ping 172.17.0.2
 ```
 
-![image-20231113132617422](C:\Users\文\AppData\Roaming\Typora\typora-user-images\image-20231113132617422.png)
+![image-20231113132617422](../../../public/image-20231113132617422.png)
 
 结论：通过docker0路由转发，不指定网络的情况下，都是dockers的可用网络
 

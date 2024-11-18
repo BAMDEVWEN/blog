@@ -2,10 +2,9 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import {SITE_TITLE, SITE_DESCRIPTION} from '../../consts';
+import {SITE_TITLE, SITE_DESCRIPTION,DEFAULT_IMAGE_URL} from '../../consts';
 import {getCollection} from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
-
 const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -149,6 +148,11 @@ const posts = (await getCollection('blog')).sort(
 					.filter(post => post.data.tags.some(tag => (Astro.url.searchParams.get('tag'))?tag===( Astro.url.searchParams.get('tag')):true))
 					.map(post => (
 						<li>
+                            <div>
+                                {
+                                    post.data.heroImage?<img src={post.data.heroImage} alt={post.data.title} /> :<img src=`${DEFAULT_IMAGE_URL}` alt={post.data.title} />
+                                }
+                            </div>
 							<a href={`/blog/${post.slug}/`}>
 								<h4 class="title">{post.data.title}</h4>
 								<div class="tags" style="display: flex; justify-content: left;">
