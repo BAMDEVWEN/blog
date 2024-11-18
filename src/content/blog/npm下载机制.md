@@ -2,7 +2,7 @@
 title: 'npm下载'
 description: 'npm 的基本使用'
 pubDate: 'Nov 18 2024'
-tags: ['npm','package']
+tags: ['npm']
 ---
 
 # npm拉取依赖
