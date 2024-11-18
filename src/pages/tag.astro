@@ -1,0 +1,80 @@
+---
+import {getCollection} from 'astro:content'
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import {SITE_DESCRIPTION, SITE_TITLE} from "../consts";
+const posts = await getCollection('blog')
+const tagsSet = new Set();
+posts.filter(post=>{
+    post.data.tags.forEach((tag)=>{
+        tagsSet.add(tag)
+    })
+})
+const tags=Array.from(tagsSet)
+---
+<html lang="en">
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+</head>
+<style>
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        //width: 60%;
+        font-size: 27px;
+    }
+
+    .title {
+        text-align: left;
+    }
+
+    .content {
+        width: 300px;
+        text-align: left;
+    }
+    .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tag {
+        display: block;
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        text-align: center;
+        margin :10px 0;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .tag:hover {
+        background-color: #0056b3;
+        transform: scale(1.1);
+    }
+
+    .tag:active {
+        background-color: #003f8a;
+    }
+</style>
+<body>
+<Header/>
+<main>
+    <div class="tags">
+        {
+            tags.map((tag)=>{
+                return <div>
+                    <a  href=`/blog?tag=${tag}` class="tag">{tag}</a>
+                </div>
+            })
+        }
+    </div>
+
+</main>
+<Footer/>
+</body>
+</html>

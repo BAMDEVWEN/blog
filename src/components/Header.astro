@@ -1,15 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { getCollection } from 'astro:content';
 import ThemeIcon from './ThemeIcon.astro';
-const posts = await getCollection('blog');
-const tagsSet = new Set();
-posts.filter(post=>{
-	post.data.tags.forEach((tag)=>{
-		tagsSet.add(tag)
-	})
-})
-const tags=Array.from(tagsSet)
 ---
 
 <header>
@@ -17,18 +8,7 @@ const tags=Array.from(tagsSet)
 		<div class="internal-links">
 			<HeaderLink href="/">首页</HeaderLink>
 			<HeaderLink href="/blog">博客</HeaderLink>
-			<div class="tag">
-				<div>标签</div>
-				<div class="dropdown-content">
-
-					{
-						tags.map((tag)=>(
-							<HeaderLink href=`/blog?tag=${tag}`>{tag}</HeaderLink>
-						))
-					}
-				</div>
-
-			</div>
+			<HeaderLink href="/tag">标签</HeaderLink>
 
 		</div>
 		<div>
