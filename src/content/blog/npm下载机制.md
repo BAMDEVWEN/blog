@@ -9,7 +9,7 @@ tags: ['npm']
 
 ## 缓存机制 
 - 优先使用cache
-- ![下载流程](../../../public/download.png)
+- ![下载流程](/download.png)
 
 ## npm的下载方式
 

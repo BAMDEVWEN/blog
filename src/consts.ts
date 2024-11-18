@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = 'BAMDEV Blog';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
-export const DEFAULT_IMAGE_URL ='../../blog-placeholder-2.jpg'
+export const DEFAULT_IMAGE_URL ='/blog-placeholder-2.jpg'
