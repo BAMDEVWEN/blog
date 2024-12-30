@@ -68,7 +68,9 @@ h6 {
 	color: white;
 	line-height: 1.2;
 }
-
+.dark p code{
+	background-color: rgb(98 100 103) !important
+}
 h1 {
 	font-size: 3.052em;
 }
