@@ -1,7 +1,7 @@
 ---
 title: 'FFI-NAPI'
 description: 'ffi-napi调用外部函数的基本使用'
-pubDate: 'Dec 31 2024'
+pubDate: 'Dec 30 2024'
 tags: ['Node.js','FFI-NAPI']
 ---
 # Node-ffi
