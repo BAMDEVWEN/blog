@@ -2,7 +2,7 @@
 title: 'Docker基础使用'
 description: 'docker 的基本使用'
 pubDate: 'Nov 15 2024'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/docker.png'
 tags: ['docker','docker-compose']
 ---
 # Docker
