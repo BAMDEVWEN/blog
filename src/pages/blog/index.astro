@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import {SITE_TITLE, SITE_DESCRIPTION,DEFAULT_IMAGE_URL} from '../../consts';
 import {getCollection} from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import Comments from "../../components/Comment";
 const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -172,10 +173,11 @@ const posts = (await getCollection('blog')).sort(
 							</a>
 						</li>
 					))
+
 			}
 		</ul>
-
 	</section>
+
 </main>
 <Footer/>
 </body>
