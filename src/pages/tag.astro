@@ -34,22 +34,25 @@ const tags=Array.from(tagsSet)
         text-align: left;
     }
     .tag-list {
+        list-style: none;
+        padding: 0;
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
     }
 
     .tag {
-        display: block;
-        background-color: #007bff;
-        color: white;
+        display: inline-block;
         padding: 5px 10px;
-        border-radius: 20px;
-        font-size: 30px;
-        cursor: pointer;
-        text-align: center;
-        margin :10px 0;
-        transition: background-color 0.3s, transform 0.2s;
+        border-radius: 5px;
+        margin: 0 5px;
+    }
+    .tag a {
+        text-decoration: none;
+        color: #202124;
+    }
+    .dark  a{
+        color: white;
     }
 
     .tag:hover {
@@ -67,9 +70,10 @@ const tags=Array.from(tagsSet)
     <div class="tags">
         {
             tags.map((tag)=>{
-                return <div>
-                    <a  href=`/blog?tag=${tag}` class="tag">{tag}</a>
-                </div>
+                return  <span class="tag">
+                    <a  href=`/blog?tag=${tag}` >{tag}</a>
+                </span>
+
             })
         }
     </div>

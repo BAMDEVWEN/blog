@@ -7,7 +7,7 @@ tags: ['docker','docker-compose']
 ---
 # Docker
 ##  Dockerfile
-- From 指定基础镜像
+- From 指定基础镜像pm
 - MAINTAINER 指定维护者信息
 - Run zai镜像中执行的指令
 - CMD 启动容器默认执行的指令   CMD ["nginx", "-g", "daemon off;"]
