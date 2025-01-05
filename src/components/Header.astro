@@ -5,6 +5,7 @@ import ThemeIcon from './ThemeIcon.astro';
 
 <header>
 	<nav>
+		<div></div>
 		<div class="internal-links">
 			<HeaderLink href="/">首页</HeaderLink>
 			<HeaderLink href="/blog">博客</HeaderLink>
@@ -28,11 +29,32 @@ import ThemeIcon from './ThemeIcon.astro';
 	</nav>
 </header>
 <style>
+	.internal-links{
+		width: 375px;
+		border-radius: 999rem;
+		height: 50px;
+		font-size: 1em;
+
+	}
+	.internal-links a {
+		border-radius: 999rem;
+		margin: 0.5rem 0.5em;
+		padding: 0 1rem;
+		border: 0;
+	}
+
+	.internal-links a:hover{
+		background-color: #2f7acb;
+	}
+	.internal-links a:active{
+		background-color: #052e5b;
+
+	}
 	header {
 		margin: 0;
 		padding: 0 1em;
 		//background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		//box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
 	h2 {
 		margin: 0;
@@ -47,16 +69,20 @@ import ThemeIcon from './ThemeIcon.astro';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-top: 2rem;
 	}
 	nav a {
-		padding: 1em 0.5em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
 	nav a.active {
 		text-decoration: none;
-		border-bottom-color: var(--accent);
+		background-color: #0056b3;
+
+		//background-color: purple;
+
+		//border-bottom-color: var(--accent);
 	}
 	.social-links,
 	.social-links a {

@@ -71,6 +71,13 @@ h6 {
 .dark p code{
 	background-color: rgb(98 100 103) !important
 }
+ .internal-links {
+	background-color: #eceef3;
+
+}
+.dark .internal-links{
+	background-color: #1c1d1e;
+}
 h1 {
 	font-size: 3.052em;
 }
