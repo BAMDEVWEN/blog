@@ -48,7 +48,7 @@ const Comments = () => {
                     repo="BAMDEVWEN/blog"
                     repoId="R_kgDONPtyUw"
                     category="Announcements"
-                    categoryId="DIC_kwDOKeudT84Cch4W"
+                    categoryId="DIC_kwDONPtyU84CluLd"
                     mapping="title"
                     reactionsEnabled="1"
                     emitMetadata="0"
